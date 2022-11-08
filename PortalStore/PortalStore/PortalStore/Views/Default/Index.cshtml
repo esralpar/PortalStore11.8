@@ -1,0 +1,167 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@*@await Html.PartialAsync("HeaderPartial")*@
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Portal Store Project </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/Eterna/assets/img/favicon.png" rel="icon">
+    <link href="~/Eterna/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/Eterna/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/Eterna/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Eterna/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Eterna/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Eterna/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/Eterna/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/Eterna/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Eterna - v4.9.1
+    * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body>
+    @*@await Html.PartialAsync("NavbarPartial")*@
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="logo">
+                <h1><a href="index.html">PortalStore</a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="/Product/Index">Product</a></li>
+                    <li><a href="/Category/Index">Category</a></li>
+                    <li><a href="/Costumer/Index">Customer</a></li>
+                    <li><a href="/Order/Index">Order</a></li>
+                    <li><a href="/OrderItem/Index">Order Item</a></li>
+                    <li><a href="/Address/Index">Address</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+        </div>
+    </header>
+    <!-- ======= Header ======= -->
+    @*@await Component.InvokeAsync("AddressList")
+
+        @await Component.InvokeAsync("CategoryList")
+
+        @await Component.InvokeAsync("CustomerList")
+
+        @await Component.InvokeAsync("OrderList")
+
+        @await Component.InvokeAsync("OrderItemList")
+
+        @await Component.InvokeAsync("SKUList")*@
+
+
+<main id="main">
+
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                        <h4><a href="">ADDRESS</a></h4>
+                        <p>You can find the Address here.</p>
+                        <a href="/Address/Index" target="_blank">Visit</a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4><a href="">CATEGORY</a></h4>
+                        <p>You can find the Category here.</p>
+                        <a href="/Category/Index" target="_blank">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-tachometer"></i></div>
+                        <h4><a href="">CUSTOMER</a></h4>
+                        <p>You can find the Customer here.</p>
+                        <a href="/Customer/Index" target="_blank">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-world"></i></div>
+                        <h4><a href="">ORDER</a></h4>
+                        <p>You can find the Order here.</p>
+                        <a href="/Order/Index" target="_blank">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-slideshow"></i></div>
+                        <h4><a href="">ORDER ITEM</a></h4>
+                        <p>You can find the Order Item here.</p>
+                        <a href="/OrderItem/Index" target="_blank">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-arch"></i></div>
+                        <h4><a href="">SKU</a></h4>
+                        <p>You can find the Product here.</p>
+                        <a href="/SKU/Index" target="_blank">Visit</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/Eterna/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/Eterna/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Eterna/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/Eterna/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/Eterna/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/Eterna/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/Eterna/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/Eterna/assets/js/main.js"></script>
+
+</body>
+
+</html>

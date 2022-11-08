@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.Customer
+@{
+    ViewData["Title"] = "EditCustomer";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditCustomer", "Customer", FormMethod.Post))
+{
+<div class="col-md-6">
+    @Html.HiddenFor(x => x.Id)
+    <br />
+    @Html.Label("Name")
+    @Html.TextAreaFor(x => x.FirstName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Last Name")
+    @Html.TextAreaFor(x => x.LastName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Email")
+    @Html.TextAreaFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    @Html.Label("TC ID")
+    @Html.TextAreaFor(x => x.TCID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Birthdate")
+    @Html.TextAreaFor(x => x.Birthdate, new { @class = "form-control" })
+    <br />
+    @Html.Label("Gsm")
+    @Html.TextAreaFor(x => x.Gsm, new { @class = "form-control" })
+    <br />
+    @Html.Label("Status")
+    @Html.TextAreaFor(x => x.Status, new { @class = "form-control" })
+    <br />
+    @Html.Label("Creation Date")
+    @Html.TextAreaFor(x => x.CreationDate, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <button class="btn btn-dark">Cancel</button>
+</div>
+
+}
+
+

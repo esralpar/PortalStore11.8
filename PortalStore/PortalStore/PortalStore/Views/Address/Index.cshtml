@@ -1,0 +1,63 @@
+﻿@using EntityLayer.Concrete
+@model List<Address>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Address Page</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ADDRESS LINE</th>
+                    <th>COUNTRY</th>
+                    <th>CITY</th>
+                    <th>DISTRICT</th>
+                    <th>ZIP CODE</th>
+                    <th>CUSTOMER ID</th>
+                    <th>STATUS</th>
+                    <th>CREATION DATE</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="success">
+                        <td>@item.Id</td>
+                        <td>@item.AddressLine</td>
+                        <td>@item.Country</td>
+                        <td>@item.City</td>
+                        <td>@item.Discrict</td>
+                        <td>@item.ZipCode</td>
+                        <td>@item.CustomerId</td>
+                        <td>@item.Status</td>
+                        <td>@item.CreationDate</td>
+                        <td><a href="#" class="btn btn-danger">Delete</a></td>
+                        <td><a href="#" class="btn btn-primary">Update</a></td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+        <a href="/Address/AddAddress" class="btn btn-success">ADD</a>
+    </div>
+
+</body>
+</html>

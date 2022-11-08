@@ -1,0 +1,47 @@
+﻿@model EntityLayer.Concrete.OrderItem
+@{
+    ViewData["Title"] = "AddOrderItem";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddOrderItem", "OrderItem", FormMethod.Post))
+{
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description">ADD ORDER ITEM PANEL</p>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>SKU ID</label>
+                        <input type="text" class="form-control" name="SKU ID">
+                    </div>
+                    <div class="form-group">
+                        <label>Order ID</label>
+                        <input type="text" class="form-control" name="Order ID">
+                    </div>
+                    <div class="form-group">
+                        <label>Unit Price</label>
+                        <input type="text" class="form-control" name="Unit Price">
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="text" class="form-control" name="Quantity">
+                    </div>
+                    <div class="form-group">
+                        <label>Status </label>
+                        <input type="text" class="form-control" name="Status">
+                    </div>
+                    <div class="form-group">
+                        <label>Creation Date </label>
+                        <input type="text" class="form-control" name="Date">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button class="btn btn-primary">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+

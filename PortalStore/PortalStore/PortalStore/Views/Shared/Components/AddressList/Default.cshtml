@@ -1,0 +1,59 @@
+﻿@using EntityLayer.Concrete
+@model List<Address>
+<section id="services" class="services">
+    <div class="container">
+        @foreach(var item in Model)
+        {
+        <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                    <h4><a href="">PRODUCT</a></h4>
+                    <p>You can find the products here.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-file"></i></div>
+                    <h4><a href="">CATEGORY</a></h4>
+                    <p>You can find the category here.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-tachometer"></i></div>
+                    <h4><a href="">CUSTOMER</a></h4>
+                    <p>You can find the customer here.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-world"></i></div>
+                    <h4><a href="">ORDER</a></h4>
+                    <p>You can find the order here.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-slideshow"></i></div>
+                    <h4><a href="">ORDER ITEM</a></h4>
+                    <p>You can find the order item here.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-arch"></i></div>
+                    <h4><a href="">ADDRESS</a></h4>
+                    <p>You can find the address here.</p>
+                </div>
+            </div>
+
+        </div>
+        }
+    </div>
+</section>
